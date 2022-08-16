@@ -1,4 +1,4 @@
-# jackson_desktop
+# Jackson Chemical Industries
 
 A new Flutter project.
 
