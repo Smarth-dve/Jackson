@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateform() {
+            location.href = "http://127.0.0.1:5500/login.html"
+
+            console.log(1);
+            var name = document.myform.uname.value;
+            var password = document.myform.psw.value;
+
+            if (name == null || name == "") {
+                alert("Name can't be blank");
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+            else{
+                // window.location.href("http://127.0.0.1:5500/index.html")
+                return true;
+            }
+        }  
+    </script>
+
+    <title>Jackson Chemical Industries</title>
+</head>
+
+<body>
+    <ul>
+        <li style="float:left; padding: 0;"><a href="index.html"
+                style="width:fit-content; padding: 0%; background-color: #fff;"><img src="/images/logo.png"
+                    alt="JacksonLogo" width="270" height="81" margin="0"></a></li>
+        <!-- <li style="float: right"><a href="login.html" style="font-size: 20px;">Login<i class="fa fa-sign-out fa-lg"></i></a></li> -->
+        <button class="login" onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;">Login<i class="fa fa-sign-out fa-lg"></i></button>
+        <!-- <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i class="fa fa-bell fa-lg"></i></a></li> -->
+        <!-- <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li> -->
+    </ul>
+
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="./index.html" name="myform">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button type="submit" class="loginbutton" onclick="return validateform()">Login</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
