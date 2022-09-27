@@ -20,10 +20,11 @@
             height: 100vh;
             overflow: hidden;
         }
+
         /* Full-width input fields */
         input[type=text],
         input[type=password],
-        input[type=email ]{
+        input[type=email] {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -33,8 +34,8 @@
         }
 
         input[type=text]:focus,
-        input[type=password]:focus ,
-        input[type=email]:focus{
+        input[type=password]:focus,
+        input[type=email]:focus {
             background-color: #ddd;
             outline: none;
         }
@@ -75,7 +76,7 @@
 
 
 
- 
+
 
         .center {
             position: absolute;
@@ -235,7 +236,7 @@
         /* W3Schools login form details */
         input[type=text],
         input[type=password],
-        input[type=email]{
+        input[type=email] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -312,6 +313,9 @@
             /* border-radius: 50%; */
         }
 
+        /* .container1 {
+            padding: 16px;
+        } */
         .container2 {
             padding: 16px;
         }
@@ -323,7 +327,7 @@
             padding-left: 120px;
         }
 
-        .bottom{
+        .bottom {
             margin-top: 30px;
         }
 
@@ -442,7 +446,7 @@
             <ul>
                 <li style="float:left; padding: 0;"><a href="index.html"
                         style="width:fit-content; padding: 0%; background-color: #fff;"><img src="./images/logo.png"
-                            alt="JacksonLogo" width="300" height="83" margin="0"></a></li>
+                            alt="JacksonLogo" width="300" height="81" margin="0"></a></li>
                 <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
                             class="fa fa-sign-out fa-lg"></i></a></li>
                 <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
@@ -458,7 +462,8 @@
                                 class="fa fa-sign-out fa-lg"></i></button>
                         <div id="id01" class="modal">
 
-                            <form class="modal-content animate" action="../AddUserPage/adduser.html" name="myform">
+                            <form class="modal-content animate" name="myform" action="./adduser.html">
+
                                 <div class="imgcontainer">
                                     <span onclick="document.getElementById('id01').style.display='none'" class="close"
                                         title="Close Modal">&times;</span>
@@ -466,23 +471,26 @@
 
                                 <div class="container2">
                                     <label for="username"><b>Username</b></label>
-                                    <input type="text" placeholder="Enter Username" name="username" id="username">
+                                    <input type="text" placeholder="Enter Username" name="username" id="username"
+                                        method="post" required>
 
                                     <label for="email"><b>Email</b></label>
-                                    <input type="email" placeholder="Enter Email" name="email" id="email">
+                                    <input type="email" placeholder="Enter Email" name="email" id="email" method="post"
+                                        required>
 
                                     <label for="psw"><b>Password</b></label>
-                                    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
+                                    <input type="password" placeholder="Enter Password" name="psw" id="psw"
+                                        method="post" required>
+                                    
                                     <label for="psw-repeat"><b>Confirm Password</b></label>
                                     <input type="password" placeholder="Confirm Password" name="psw-repeat"
-                                        id="psw-repeat" required>
+                                        method="post" id="psw-repeat" required>
                                     <hr>
-                                    <button type="submit" class="registerbtn">Register</button>
+                                    <button type="submit" id="submit" class="registerbtn">Register</button>
                                 </div>
                             </form>
                         </div>
-                    </div>
+
 
                     <div class="updatesalary">
                         <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
@@ -491,12 +499,31 @@
                     <div class="findauser">
                         <button class="User">Find A User<i class="fa fa-sign-out fa-lg"></i></button>
                     </div>
+
+
                 </div>
 
                 <div class="bottom">
-
                     <div class="attendance">
                         <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
+                    </div>
+
+                    <div id="id05" class="modal">
+                        
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+                            title="Type in a name">
+
+                        <ul id="myUL">
+                            <li><a href="#">Adele</a></li>
+                            <li><a href="#">Agnes</a></li>
+
+                            <li><a href="#">Billy</a></li>
+                            <li><a href="#">Bob</a></li>
+
+                            <li><a href="#">Calvin</a></li>
+                            <li><a href="#">Christina</a></li>
+                            <li><a href="#">Cindy</a></li>
+                        </ul>
                     </div>
 
                     <div class="shiftmanagement">
@@ -508,6 +535,7 @@
                     </div>
                 </div>
             </div>
-        </body>
+    </div>
+</body>
 
 </html>
