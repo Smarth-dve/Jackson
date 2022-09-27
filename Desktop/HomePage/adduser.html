@@ -7,10 +7,311 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./ADDUSER.css">
+  <!-- <link rel="stylesheet" href="./ADDUSER.css"> -->
   <!-- <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"> -->
   <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css">
+
+  <style>
+    html{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      /* display: flex; */
+      /* height: 200vh; */
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      font-family: poppins;
+      /* padding:10px; */
+    }
+
+    .container {
+      margin-top: 20px;
+      display: flex;
+      /* height: 200vh; */
+      justify-content: center;
+      align-items: center;
+      /* background-color: rgb (0,0,0); */
+      /* background-color: rgb(0,0,0, 0.4); */
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 83px;
+      background-color: #00B6FF;
+      width: 100%;
+    }
+
+    li {
+      padding-right: 0;
+      padding-left: 50px;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .button1:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    i {
+      margin-left: 5px;
+      padding-top: 2px;
+      margin-right: 20px;
+    }
+
+
+    .container1 {
+      max-width: 800px;
+      width: 100%;
+      background: #FFFFFF;
+      padding: 25px 30px;
+      border-radius: 5px;
+    }
+
+    .container1 .title {
+      font-size: 25px;
+      font-weight: 1000;
+      text-decoration: underline;
+    }
+
+    .container1 form .basic-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding:10px;
+      /* border:10px; */
+    }
+
+    form .basic-details .input-box {
+      margin: 10px 0 10px 0;
+      width: calc(100% / 2 - 20px);
+    }
+
+    form .basic-details .input-box .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    .basic-details .input-box input {
+      height: 45px;
+      width: 100%;
+      /* padding:10px; */
+      border: none;
+      background-color: #f1f1f1;
+
+    }
+
+    form .gender-details .gender-title {
+      font-size: 16px;
+      font-weight: 1000;
+    }
+
+    form .gender-details .category {
+      display: flex;
+      width: 80%;
+      margin: 10px;
+      justify-content: space-between;
+    }
+
+    .gender-details .category label {
+      display: flex;
+      align-items: center;
+    }
+
+    .gender-details .category .dot {
+      height: 16px;
+      width: 16px;
+      background: white;
+      border-radius: 50%;
+      border-right: 10px;
+      border: 5px;
+    }
+
+    .container2 {
+      display: block;
+      /* width: 200%; */
+    }
+
+    .container2 .family {
+      display: flex;
+      flex: wrap;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+
+    .container2 form .father-details .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    form .father-details .input-box {
+      margin: 10px 0 10px 0;
+    }
+
+    .container2 form .father-details .input-box .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    .container2 .father-details .input-box input {
+      height: 45px;
+      width: 100%;
+      /* padding:10px; */
+      border: none;
+      background-color: #f1f1f1;
+
+    }
+
+    .container2 form .mother-details .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    form .mother-details .input-box {
+      margin: 10px 0 10px 0;
+    }
+
+    form .mother-details .input-box .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    .mother-details .input-box input {
+      height: 45px;
+      width: 100%;
+      /* padding:10px; */
+      border: none;
+      background-color: #f1f1f1;
+    }
+
+    .container2 form .child-details .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    form .child-details .input-box {
+      margin: 10px 0 10px 0;
+    }
+
+    form .child-details .input-box .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    .child-details .input-box input {
+      height: 45px;
+      width: 100%;
+      /* padding:10px; */
+      border: none;
+      background-color: #f1f1f1;
+    }
+
+    .container2 form .sibling-details .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    form .sibling-details .input-box {
+      margin: 10px 0 10px 0;
+    }
+
+    form .sibling-details .input-box .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    .sibling-details .input-box input {
+      height: 45px;
+      width: 100%;
+      /* padding:10px; */
+      border: none;
+      background-color: #f1f1f1;
+    }
+
+    .container3 {
+      width: 100%;
+      /* background: #00B6FF; */
+      /* padding: 25px 30px; */
+      border-radius: 5px;
+    }
+
+    .container3 .title {
+      font-size: 25px;
+      font-weight: 1000;
+      text-decoration: underline;
+    }
+
+    .container3 form .med-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* padding:10px; */
+      /* border:10px; */
+    }
+
+    form .med-details .input-box {
+      margin: 10px 0 10px 0;
+      width: calc(100% / 2 - 20px);
+    }
+
+    form .med-details .input-box .details {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 1000;
+    }
+
+    .med-details .input-box input {
+      height: 45px;
+      width: 100%;
+      /* padding:10px; */
+      border: none;
+      background-color: #f1f1f1;
+    }
+
+    hr {
+      background-color: #f1f1f1;
+    }
+
+    button {
+      background-color: #00B6FF;
+      border-radius: 5px;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -33,28 +334,32 @@
       <form>
         <div class="basic-details">
           <div class="input-box">
+            <span class="details">UserName</span>
+            <input type="text" id="fn" placeholder="Enter username" required>
+          </div>
+          <div class="input-box">
             <span class="details">First Name</span>
-            <input type="text" placeholder="Enter Your FirstName" required>
+            <input type="text" id="fn" placeholder="Enter Your FirstName" required>
           </div>
           <div class="input-box">
             <span class="details">Last Name</span>
-            <input type="text" placeholder="Enter Your LastName" required>
+            <input type="text" id="ln" placeholder="Enter Your LastName" required>
           </div>
           <div class="input-box">
             <span class="details">Mobile Number</span>
-            <input type="text" placeholder="Enter Your Mobile Number" required>
+            <input type="text" id="mob" placeholder="Enter Your Mobile Number" required>
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="email" placeholder="Enter Your Email" required>
+            <input type="email" id="email" placeholder="Enter Your Email" required>
           </div>
           <div class="input-box">
             <span class="details">Address Line 1</span>
-            <input type="text" placeholder="Enter Address Line 1" required>
+            <input type="text" id="add1" placeholder="Enter Address Line 1" required>
           </div>
           <div class="input-box">
             <span class="details">Address Line 2</span>
-            <input type="text" placeholder="Enter Address Line 2" required>
+            <input type="text" id="add2" placeholder="Enter Address Line 2" required>
           </div>
           <!-- <div class="input-box">
               <span class="details">Employee ID</span>
@@ -62,32 +367,50 @@
             </div> -->
           <div class="input-box">
             <span class="details">Designation</span>
-            <input type="text" placeholder="Enter Designation" required>
+            <input type="text" id="des" placeholder="Enter Designation" required>
           </div>
           <div class="input-box">
             <span class="details">Department</span>
-            <input type="text" placeholder="Enter Department" required>
+            <input type="text" id="dep" placeholder="Enter Department" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" id="doj" placeholder="Enter Date of Birth" required>
           </div>
           <div class="input-box">
             <span class="details">Date of joining</span>
-            <input type="date" placeholder="Enter DOJ" required>
+            <input type="date" id="doj" placeholder="Enter Date Of Joining" required>
           </div>
           <div class="input-box">
             <span class="details">PF Number</span>
-            <input type="text" placeholder="Enter PF Number" required>
+            <input type="text" id="pf" placeholder="Enter PF Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Aadhar Number</span>
+            <input type="text" placeholder="Enter Aadhar Number">
           </div>
           <div class="input-box">
             <span class="details">Account Number</span>
-            <input type="text" placeholder="Enter Account Number" required>
+            <input type="text" id="acc" placeholder="Enter Account Number" required>
+          </div>
+         
+          <div class="input-box">
+            <span class="details">UAN</span>
+            <input type="text" id="acc" placeholder="Enter UAN" required>
           </div>
           <div class="input-box">
             <span class="details">ESI Number</span>
-            <input type="text" placeholder="Enter ESI Number" required>
+            <input type="text" id="esi" placeholder="Enter ESI Number" required>
           </div>
           <div class="input-box">
             <span class="details">PAN Number</span>
-            <input type="text" placeholder="Enter PAN Number" required>
+            <input type="text" id="pan" placeholder="Enter PAN Number" required>
           </div>
+          <div class="input-box">
+            <span class="details">User Image</span>
+            <input type="file" id="myFile" name="filename">
+          </div>
+          <button type="submit" id="submit" class="registerbtn" style="padding: 8px;">Save</button> 
           <!-- <div class="gender-details">
             <span class="gender-title">Gender</span>
             <div class="category">
@@ -105,7 +428,6 @@
               </label>
             </div>
           </div> -->
-          <button type="submit" id="submit" class="registerbtn" style="float:right; width: 20%; height: 23.33px; padding: 4px; margin-top: 64px;">Save</button>
         </div>
       </form>
       <br>
@@ -139,7 +461,7 @@
               </div>
             </div>
             <button type="submit" id="submit" class="registerbtn"
-              style="margin-left: 15px; width: 140px; padding: 4px;">Save</button>
+              style="padding: 8px;">Save</button>
           </form>
           <!-- ///////////////////////////////////////////////////////MOTHER-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -162,7 +484,7 @@
               </div>
             </div>
             <button type="submit" id="submit" class="registerbtn"
-              style="margin-left: 15px; width: 140px; padding: 4px;">Save</button>
+            style="padding: 8px;">Save</button>
           </form>
           <!-- ///////////////////////////////////////////////////////CHILD-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -185,7 +507,7 @@
               </div>
             </div>
             <button type="submit" id="submit" class="registerbtn"
-              style="margin-left: 15px; width: 140px; padding: 4px;">Save</button>
+            style="padding: 8px;">Save</button>
           </form>
           <!-- ///////////////////////////////////////////////////////SIBLING-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -207,7 +529,7 @@
                 <input type="text" placeholder="Enter Aadhar Number">
               </div>
               <button type="submit" id="submit" class="registerbtn"
-                style="margin-left: 15px; width: 140px; padding: 4px;">Save</button>
+              style="padding: 8px;">Save</button>
 
             </div>
           </form>
@@ -245,7 +567,7 @@
               </div>
             </div>
             <button type="submit" id="submit" class="registerbtn"
-              style="float: right; width: 20%; padding: 4px;">Save</button>
+            style="padding: 8px;">Save</button>
           </form>
         </div>
 
@@ -256,5 +578,76 @@
     </div>
   </div>
 </body>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAsfIESpxT54Yes0u4TAMTg6moGmBrkatA",
+    authDomain: "dummy-jackson.firebaseapp.com",
+    databaseURL: "https://dummy-jackson-default-rtdb.firebaseio.com",
+    projectId: "dummy-jackson",
+    storageBucket: "dummy-jackson.appspot.com",
+    messagingSenderId: "839039942638",
+    appId: "1:839039942638:web:b7ce19854dee860a6c18ff",
+    measurementId: "G-5EY6ZHQ916"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+  const database = getDatabase(app);
+
+  submit_basic.addEventListener('click', (e) => {
+
+    var username = document.getElementById('username').value;
+    var fn = document.getElementById('fn').value;
+    var ln = document.getElementById('ln').value;
+    var mob = document.getElementById('mob').value;
+    var email = document.getElementById('email').value;
+    var add1 = document.getElementById('add1').value;
+    var add2 = document.getElementById('add2').value;
+    var des = document.getElementById('des').value;
+    var dep = document.getElementById('dep').value;
+    var doj = document.getElementById('doj').value;
+    var pf = document.getElementById('pf').value;
+    var acc = document.getElementById('acc').value;
+    var esi = document.getElementById('esi').value;
+    var pan = document.getElementById('pan').value;
+
+    update(ref(database, 'users/' + user.username), {
+      fn: fn,
+      ln: ln,
+      mob: mob,
+      email: email,
+      add1: add1,
+      add2: add2,
+      des: des,
+      dep: dep,
+      doj: doj,
+      pf: pf,
+      acc: acc,
+      esi: esi,
+      pan: pan
+    })
+      .then(() => {
+
+        alert('basic info updated successfully!');
+      })
+      .catch((error) => {
+
+        alert(error);
+      });
+
+  })
+
+</script>
 
 </html>
