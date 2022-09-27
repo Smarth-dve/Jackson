@@ -203,12 +203,20 @@
             text-decoration: underline;
         }
 
-        ul {
+        .head {
             list-style-type: none;
             margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #00B6FF;
+        }
+
+        .finduser {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: white;
         }
 
         li {
@@ -318,6 +326,11 @@
         } */
         .container2 {
             padding: 16px;
+        }
+
+        .container4 {
+            padding: 16px;
+            padding-top: 35px;
         }
 
         .maincontainer {
@@ -435,7 +448,59 @@
                 width: 100%;
             }
         }
+
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
     </style>
+
+    <script>
+        function SearchUser() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -443,13 +508,13 @@
     <div class="container">
 
         <body>
-            <ul>
-                <li style="float:left; padding: 0;"><a href="index.html"
+            <ul class='head'>
+                <li class="navbar" style="float:left; padding: 0;"><a href="index.html"
                         style="width:fit-content; padding: 0%; background-color: #fff;"><img src="./images/logo.png"
                             alt="JacksonLogo" width="300" height="81" margin="0"></a></li>
-                <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
+                <li class='navbar' style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
                             class="fa fa-sign-out fa-lg"></i></a></li>
-                <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
+                <li class="navbar" style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
                             class="fa fa-bell fa-2x"></i></a></li>
 
             </ul>
@@ -481,7 +546,7 @@
                                     <label for="psw"><b>Password</b></label>
                                     <input type="password" placeholder="Enter Password" name="psw" id="psw"
                                         method="post" required>
-                                    
+
                                     <label for="psw-repeat"><b>Confirm Password</b></label>
                                     <input type="password" placeholder="Confirm Password" name="psw-repeat"
                                         method="post" id="psw-repeat" required>
@@ -492,50 +557,59 @@
                         </div>
 
 
-                    <div class="updatesalary">
-                        <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
+                        <div class="updatesalary">
+                            <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
+                        </div>
+
+                        <div class="findauser">
+                            <button class="User" onclick="document.getElementById('id03').style.display='block'">Add
+                                User<i class="fa fa-sign-out fa-lg"></i></button>
+                            <div id="id03" class="modal">
+                                <form class="modal-content animate" action="">
+                                    <div class="imgcontainer">
+                                        <span onclick="document.getElementById('id03').style.display='none'"
+                                            class="close" title="Close Modal">&times;</span>
+                                    </div>
+
+                                    <div class="container4">
+                                        <input type="text" id="myInput" onkeyup="SearchUser()"
+                                            placeholder="Search for names.." title="Type in a name">
+
+                                        <ul id="myUL" class="finduser">
+                                            <li style="padding: 0;"><a href="#">20CE005</a></li>
+                                            <li style="padding: 0;"><a href="#">20CE011</a></li>
+
+                                            <li style="padding: 0;"><a href="#">20CE019</a></li>
+                                            <li style="padding: 0;"><a href="#">20CE021</a></li>
+
+                                            <li style="padding: 0;"><a href="#">20CE023</a></li>
+                                            <li style="padding: 0;"><a href="#">14CH112</a></li>
+                                            <li style="padding: 0;"><a href="#">12CH091</a></li>
+                                        </ul>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+
                     </div>
 
-                    <div class="findauser">
-                        <button class="User">Find A User<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
+                    <div class="bottom">
+                        <div class="attendance">
+                            <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
+                        </div>
 
+                        <div class="shiftmanagement">
+                            <button class="User">Shift Management<i class="fa fa-sign-out fa-lg"></i></button>
+                        </div>
 
-                </div>
-
-                <div class="bottom">
-                    <div class="attendance">
-                        <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
-
-                    <div id="id05" class="modal">
-                        
-                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
-                            title="Type in a name">
-
-                        <ul id="myUL">
-                            <li><a href="#">Adele</a></li>
-                            <li><a href="#">Agnes</a></li>
-
-                            <li><a href="#">Billy</a></li>
-                            <li><a href="#">Bob</a></li>
-
-                            <li><a href="#">Calvin</a></li>
-                            <li><a href="#">Christina</a></li>
-                            <li><a href="#">Cindy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="shiftmanagement">
-                        <button class="User">Shift Management<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
-
-                    <div class="changepassword">
-                        <button class="User">Change Password<i class="fa fa-sign-out fa-lg"></i></button>
+                        <div class="changepassword">
+                            <button class="User">Change Password<i class="fa fa-sign-out fa-lg"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
-    </div>
-</body>
+        </body>
 
 </html>
