@@ -20,10 +20,11 @@
             height: 100vh;
             overflow: hidden;
         }
+
         /* Full-width input fields */
         input[type=text],
         input[type=password],
-        input[type=email ]{
+        input[type=email] {
             width: 100%;
             padding: 15px;
             margin: 5px 0 22px 0;
@@ -33,8 +34,8 @@
         }
 
         input[type=text]:focus,
-        input[type=password]:focus ,
-        input[type=email]:focus{
+        input[type=password]:focus,
+        input[type=email]:focus {
             background-color: #ddd;
             outline: none;
         }
@@ -75,7 +76,7 @@
 
 
 
- 
+
 
         .center {
             position: absolute;
@@ -235,7 +236,7 @@
         /* W3Schools login form details */
         input[type=text],
         input[type=password],
-        input[type=email]{
+        input[type=email] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -315,6 +316,10 @@
         .container2 {
             padding: 16px;
         }
+        .container4 {
+            margin-top: 6%;
+            padding: 16px;
+        }
 
         .maincontainer {
             display: block;
@@ -323,7 +328,7 @@
             padding-left: 120px;
         }
 
-        .bottom{
+        .bottom {
             margin-top: 30px;
         }
 
@@ -431,195 +436,280 @@
                 width: 100%;
             }
         }
+
+        #myInput {
+            background-image: url('/css/searchicon.png');
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myUL li a {
+            border: 1px solid #ddd;
+            margin-top: -1px;
+            /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            text-decoration: none;
+            margin: 2px;
+            font-size: 18px;
+            color: black;
+            display: block
+        }
+
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
     </style>
 </head>
 
 
-        <body>
-            <ul>
-                <li style="float:left; padding: 0;"><a href="index.html"
-                        style="width:fit-content; padding: 0%; background-color: #fff;"><img src="./images/logo.png"
-                            alt="JacksonLogo" width="300" height="83" margin="0"></a></li>
-                <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
-                            class="fa fa-sign-out fa-lg"></i></a></li>
-                <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
-                            class="fa fa-bell fa-2x"></i></a></li>
+<body>
+    <ul>
+        <li style="float:left; padding: 0;"><a href="index.html"
+                style="width:fit-content; padding: 0%; background-color: #fff;"><img src="./images/logo.png"
+                    alt="JacksonLogo" width="300" height="83" margin="0"></a></li>
+        <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
+                    class="fa fa-sign-out fa-lg"></i></a></li>
+        <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
+                    class="fa fa-bell fa-2x"></i></a></li>
 
-            </ul>
+    </ul>
 
-            <div class="maincontainer">
-                <div class="top">
+    <div class="maincontainer">
+        <div class="top">
 
-                    <div class="adduser">
-                        <button class="User" onclick="document.getElementById('id01').style.display='block'">Add User<i
-                                class="fa fa-sign-out fa-lg"></i></button>
-                        <div id="id01" class="modal">
+            <div class="adduser">
+                <button class="User" onclick="document.getElementById('id01').style.display='block'">Add User<i
+                        class="fa fa-sign-out fa-lg"></i></button>
+                <div id="id01" class="modal">
 
-                            <form class="modal-content animate" action="../AddUserPage/adduser.html" name="myform">
-                                <div class="imgcontainer">
-                                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                        title="Close Modal">&times;</span>
-                                </div>
-
-                                <div class="container2">
-                                    <label for="username"><b>Username</b></label>
-                                    <input type="text" placeholder="Enter Username" name="username" id="username" method="post" required>
-
-                                    <label for="email"><b>Email</b></label>
-                                    <input type="email" placeholder="Enter Email" name="email" id="email" method="post" required>
-
-                                    <label for="psw"><b>Password</b></label>
-                                    <input type="password" placeholder="Enter Password" name="psw" id="psw" method="post" required>
-
-                                    <!-- <label for="psw-repeat"><b>Confirm Password</b></label>
-                                    <input type="password" placeholder="Confirm Password" name="psw-repeat" method="post" id="psw-repeat" required> -->
-                                    <hr>
-                                    <button type="button" id="submit" class="registerbtn">Register</button>
-                                </div>
-                            </form>
+                    <form class="modal-content animate" action="../AddUserPage/adduser.html" name="myform">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                title="Close Modal">&times;</span>
                         </div>
-                    </div>
 
-                    <div class="updatesalary">
-                        <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
+                        <div class="container2">
+                            <label for="username"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="username" id="username" method="post"
+                                required>
 
-                    <div class="findauser">
-                        <button class="User">Find A User<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
-                </div>
+                            <label for="email"><b>Email</b></label>
+                            <input type="email" placeholder="Enter Email" name="email" id="email" method="post"
+                                required>
 
-                <div class="bottom">
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" id="psw" method="post"
+                                required>
 
-                    <div class="attendance">
-                        <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
-
-                    <div class="shiftmanagement">
-                        <button class="User">Shift Management<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
-
-                    <div class="changepassword">
-                        <button class="User">Change Password<i class="fa fa-sign-out fa-lg"></i></button>
-                    </div>
+                            <!-- <label for="psw-repeat"><b>Confirm Password</b></label>
+                                    <input type="password" placeholder="Confirm Password" name="psw-repeat" method="post" id="psw-repeat" required> -->
+                            <hr>
+                            <button type="button" id="submit" class="registerbtn">Register</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </body>
 
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-            import {
-                getAuth,
-                createUserWithEmailAndPassword,
-                signInWithEmailAndPassword,
-                signOut
-            } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-            import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-        
-            const firebaseConfig = {
-                apiKey: "AIzaSyD9yGArkz7oubGAtVO2FbwThGikxhJY3hw",
-                authDomain: "trialproject-9f7bf.firebaseapp.com",
-                databaseURL: "https://trialproject-9f7bf-default-rtdb.firebaseio.com",
-                projectId: "trialproject-9f7bf",
-                storageBucket: "trialproject-9f7bf.appspot.com",
-                messagingSenderId: "188371728581",
-                appId: "1:188371728581:web:f22681635b4def702098ac",
-                measurementId: "G-BCN320ENDH"
-            };
-        
-            // Initialize Firebase
-            const app = initializeApp(firebaseConfig);
-            const auth = getAuth();
-            const database = getDatabase(app);
-        
-                submit.addEventListener('click', (e) => {
-                    
-                    var email = document.getElementById('email').value;
-                    var password = document.getElementById('psw').value;
-                    var username = document.getElementById('username').value;
-                    var fn = "";
-                    var ln = "";
-                    var mob = "";
-                    var add1 = "";
-                    var add2 = "";
-                    var des = "";
-                    var dep = "";
-                    var dob = "";
-                    var doj = "";
-                    var aadhar = "";
-                    var pf = "";
-                    var acc = "";
-                    var uan = "";
-                    var esi = "";
-                    var pan = "";
-                    var fathen = "";
-                    var fathermob = "";
-                    var fatherdob = "";
-                    var fatheraadhar = "";
-                    var mothern = "";
-                    var mothermob = "";
-                    var motherdob = "";
-                    var motheraadhar = "";
-                    var childn = "";
-                    var childmob = "";
-                    var childdob = "";
-                    var childaadhar = "";
-                    var siblingn = "";
-                    var siblingmob = "";
-                    var siblingdob = "";
-                    var siblingaadhar = "";
-                    var bg = "";
-                    var mh = "";
-                    var nod = "";
-                    var lcd = "";
-                    var ot = "";
-                    
-                    createUserWithEmailAndPassword(auth, email, password)
-                        .then((userCredential) => {
+            <div class="updatesalary">
+                <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
+            </div>
 
-                                const user = userCredential.user;
-                                
-                                set(ref(database, 'users/' + username), {
-                                    email: email,
-                                    password: password,
-                                    username: username,
-                                    fn: fn,
-                                    ln: ln,
-                                    mob: mob,
-                                    // email: email,
-                                    add1: add1,
-                                    add2: add2,
-                                    des: des,
-                                    dep: dep,
-                                    dob: dob,
-                                    doj: doj,
-                                    pf: pf,
-                                    aadhar: aadhar,
-                                    acc: acc,
-                                    uan: uan,
-                                    esi: esi,
-                                    pan: pan,
-                                    // img: img
-                                })
-                                    .then(() => {
-                                       
-                                        alert('user created successfully');
-                                        window.location="./adduser.html"
-                        
-                                    })
-                                    .catch((error) => {
-                                        
-                                        alert(error);
-                                    });
+            <div class="findauser">
+                <button class="User" onclick="document.getElementById('id03').style.display='block'">Search
+                    User<i class="fa fa-sign-out fa-lg"></i></button>
+                <div id="id03" class="modal">
+                    <form class="modal-content animate" action="">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id03').style.display='none'" class="close"
+                                title="Close Modal">&times;</span>
+                        </div>
 
-                        })
-                        .catch((error) => {
-                            const errorCode = error.code;
-                            const errorMessage = error.message;
-                            alert(errorMessage);
-                        });
-                });
-        </script>
+                        <div class="container4">
+                            <input type="text" id="myInput" onkeyup="SearchUser()" placeholder="Search for Ids.."
+                                title="Type in an ID">
+
+                            <ul id="myUL" class="finduser">
+                                <li style="padding: 0;"><a href="#">20CE005</a></li>
+                                <li style="padding: 0;"><a href="#">20CE011</a></li>
+
+                                <li style="padding: 0;"><a href="#">20CE019</a></li>
+                                <li style="padding: 0;"><a href="#">20CE021</a></li>
+
+                                <li style="padding: 0;"><a href="#">20CE023</a></li>
+                                <li style="padding: 0;"><a href="#">14CH112</a></li>
+                                <li style="padding: 0;"><a href="#">12CH091</a></li>
+                                <li style="padding: 0;"><a href="#">12CH11</a></li>
+                            </ul>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+
+            <div class="attendance">
+                <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
+            </div>
+
+            <div class="shiftmanagement">
+                <button class="User">Shift Management<i class="fa fa-sign-out fa-lg"></i></button>
+            </div>
+
+            <div class="changepassword">
+                <button class="User">Change Password<i class="fa fa-sign-out fa-lg"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function SearchUser() {
+           var input, filter, ul, li, a, i, txtValue;
+           input = document.getElementById("myInput");
+           filter = input.value.toUpperCase();
+           ul = document.getElementById("myUL");
+           li = ul.getElementsByTagName("li");
+           for (i = 0; i < li.length; i++) {
+               a = li[i].getElementsByTagName("a")[0];
+               txtValue = a.textContent || a.innerText;
+               if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                   li[i].style.display = "";
+               } else {
+                   li[i].style.display = "none";
+               }
+           }
+       }
+</script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut
+    } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyD9yGArkz7oubGAtVO2FbwThGikxhJY3hw",
+        authDomain: "trialproject-9f7bf.firebaseapp.com",
+        databaseURL: "https://trialproject-9f7bf-default-rtdb.firebaseio.com",
+        projectId: "trialproject-9f7bf",
+        storageBucket: "trialproject-9f7bf.appspot.com",
+        messagingSenderId: "188371728581",
+        appId: "1:188371728581:web:f22681635b4def702098ac",
+        measurementId: "G-BCN320ENDH"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+    submit.addEventListener('click', (e) => {
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('psw').value;
+        var username = document.getElementById('username').value;
+        var fn = "";
+        var ln = "";
+        var mob = "";
+        var add1 = "";
+        var add2 = "";
+        var des = "";
+        var dep = "";
+        var dob = "";
+        var doj = "";
+        var aadhar = "";
+        var pf = "";
+        var acc = "";
+        var uan = "";
+        var esi = "";
+        var pan = "";
+        var fathen = "";
+        var fathermob = "";
+        var fatherdob = "";
+        var fatheraadhar = "";
+        var mothern = "";
+        var mothermob = "";
+        var motherdob = "";
+        var motheraadhar = "";
+        var childn = "";
+        var childmob = "";
+        var childdob = "";
+        var childaadhar = "";
+        var siblingn = "";
+        var siblingmob = "";
+        var siblingdob = "";
+        var siblingaadhar = "";
+        var bg = "";
+        var mh = "";
+        var nod = "";
+        var lcd = "";
+        var ot = "";
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+
+                const user = userCredential.user;
+
+                set(ref(database, 'users/' + username), {
+                    email: email,
+                    password: password,
+                    username: username,
+                    fn: fn,
+                    ln: ln,
+                    mob: mob,
+                    // email: email,
+                    add1: add1,
+                    add2: add2,
+                    des: des,
+                    dep: dep,
+                    dob: dob,
+                    doj: doj,
+                    pf: pf,
+                    aadhar: aadhar,
+                    acc: acc,
+                    uan: uan,
+                    esi: esi,
+                    pan: pan,
+                    // img: img
+                })
+                    .then(() => {
+
+                        alert('user created successfully');
+                        window.location = "./adduser.html"
+
+                    })
+                    .catch((error) => {
+
+                        alert(error);
+                    });
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+    });
+</script>
 
 </html>
