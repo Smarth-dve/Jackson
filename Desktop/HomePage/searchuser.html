@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<title>Add User Page</title>
+<title>Search User</title>
 
 <head>
   <meta charset="UTF-8">
@@ -109,15 +109,40 @@
       width: calc(100% / 2 - 20px);
     }
 
-    .search-bar input{
+
+    .searchbar{
       margin-top: 3%;
-      height: 25px;
-      width:95%;
+      height: 30px;
+      display: flex;
       border-radius: 60px;
-      padding: 10px 20px;
+      padding: 10px 30px;
       font-weight: 600;
       border: none;
       background-color: #f1f1f1;
+    }
+
+    .searchbar input{
+      background: transparent;
+      flex: 1;
+      border: 0;
+      outline: none;
+    }
+
+    .searchbar button img{
+      width: 20px;
+    }
+
+    .searchbar button{
+      border: 0;
+      border-radius: 50%;
+      width: auto;
+      margin: 0%;
+      padding: 0%;
+      width: 30px;
+      height: 30px;
+      /* background:#58629b; */
+      cursor: pointer;
+      float: right;
     }
     
 
@@ -347,12 +372,10 @@
   <!-- ///////////////////////////////////////////////////////BASIC-DETAILS///////////////////////////////////////////////// -->
   <div class="container">
     <div class="container1">
-      <span>
-      </span>
-      <form action="" class="search-bar">
-          <!-- <span class="details">UserName</span> -->
-          <input type="text" id="" placeholder= " &#xf002;  Enter Username" style="font-family: fontawesome, poppins" required>
-        </form>
+      <div class="searchbar" style="display: block;">
+        <input type="text" id="" class="search-bar" placeholder= " &#xf002;  Enter Username" style="font-family: fontawesome, poppins" required>
+        <button type="button"><img src="./images/search.png" alt=""></button>
+      </div>
         <br>
         <hr>
         <br>
@@ -423,10 +446,10 @@
             <span class="details">PAN Number</span>
             <input type="text" id="pan" placeholder="Enter PAN Number" method="post" required>
           </div>
-          <!-- <div class="input-box">
+          <div class="input-box">
             <span class="details">User Image</span>
             <input type="file" id="img" name="filename" accept=".jpg,.jpeg,.png" method="post" required>
-          </div> --> 
+          </div> 
         </div>
       </form>
       <br>
