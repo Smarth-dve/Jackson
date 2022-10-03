@@ -27,8 +27,14 @@
       background-color: rgb(0, 0, 0);
       /* Fallback color */
       background-color: rgba(0, 0, 0, 0.4);
-      font-family: poppins;
+      font-family: poppins, fontawesome;
       /* padding:10px; */
+    }
+
+    h1{
+      padding:0%;
+      margin-bottom: 0%;
+
     }
 
     .container {
@@ -41,7 +47,6 @@
       /* background-color: rgb(0,0,0, 0.4); */
     }
 
-  
     ul {
       list-style-type: none;
       margin: 0;
@@ -104,6 +109,26 @@
       width: calc(100% / 2 - 20px);
     }
 
+    /* .search-bar{
+      width: 94%;
+      background-color:#f1f1f1;
+      display: flex;
+      align-items: center;
+      border-radius: 60px;
+      padding: 10px 20px; */
+    /* } */
+
+    .search-bar input{
+      height: 25px;
+      width:95%;
+      border-radius: 60px;
+      padding: 10px 20px;
+      font-weight: 600;
+      border: none;
+      background-color: #f1f1f1;
+    }
+    
+
     form .basic-details .input-box .details {
       display: block;
       margin-bottom: 5px;
@@ -114,6 +139,7 @@
       height: 45px;
       width: 100%;
       /* padding:10px; */
+      font-family: poppins;
       border: none;
       background-color: #f1f1f1;
 
@@ -330,14 +356,17 @@
   <div class="container">
     <div class="container1">
       <span>
-        <h1>Basic Information</h1>
       </span>
-      <form>
+      <form action="" class="search-bar">
+          <!-- <span class="details">UserName</span> -->
+          <input type="text" id="" placeholder= " &#xf002;  Enter Username" style="font-family: fontawesome, poppins" required>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <form action="">
+        <h1 style="display: block;">Basic Information</h1>
         <div class="basic-details">
-          <div class="input-box">
-            <span class="details">UserName</span>
-            <input type="text" id="username" placeholder="Enter username" method="post" required>
-          </div>
           <div class="input-box">
             <span class="details">First Name</span>
             <input type="text" id="fn" placeholder="Enter Your FirstName" method="post" required>
@@ -405,8 +434,7 @@
           <!-- <div class="input-box">
             <span class="details">User Image</span>
             <input type="file" id="img" name="filename" accept=".jpg,.jpeg,.png" method="post" required>
-          </div> -->
-          <button type="button" id="save_basic" class="registerbtn" style="padding: 8px;">Save</button> 
+          </div> --> 
         </div>
       </form>
       <br>
@@ -439,8 +467,7 @@
                 <input type="text" id="fatheraadhar" placeholder="Enter Aadhar Number" required>
               </div>
             </div>
-            <button type="button" id="save_father" class="registerbtn"
-              style="padding: 8px;">Save</button>
+          
           </form>
           <!-- ///////////////////////////////////////////////////////MOTHER-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -462,8 +489,7 @@
                 <input type="text" id="motheraadhar" placeholder="Enter Aadhar Number" required>
               </div>
             </div>
-            <button type="button" id="save_mother" class="registerbtn"
-            style="padding: 8px;">Save</button>
+          
           </form>
           <!-- ///////////////////////////////////////////////////////CHILD-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -485,8 +511,7 @@
                 <input type="text" id="childaadhar" placeholder="Enter Aadhar Number" required>
               </div>
             </div>
-            <button type="button" id="save_child" class="registerbtn"
-            style="padding: 8px;">Save</button>
+          
           </form>
           <!-- ///////////////////////////////////////////////////////SIBLING-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -507,8 +532,6 @@
                 <span class="details">Aadhar Number</span>
                 <input type="text" id="siblingaadhar" placeholder="Enter Aadhar Number" required>
               </div>
-              <button type="button" id="save_sibling" class="registerbtn"
-              style="padding: 8px;">Save</button>
 
             </div>
           </form>
@@ -545,13 +568,11 @@
                 <input type="text" id="ot" placeholder="Enter Treatment" required>
               </div>
             </div>
-            <button type="button" action="./index.html" id="submit" class="registerbtn"
-            style="padding: 8px;">Save</button>
           </form>
         </div>
 
         <br><br><br><br>
-        <button type="save_medical" name="commit" style="font-weight: 600;">Add User</button>
+        <button type="save_medical" name="commit" style="font-weight: 600; padding: 1%;">Done</button>
 
       </div>
     </div>
