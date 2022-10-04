@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="C:\Users\kavir\Desktop\JACKSON\Jackson-master\Desktop\HomePage\Notification.css">
     <style>
         * {
             margin: 0;
@@ -477,7 +476,87 @@
             background-color: #eee;
         }
 
+        /* notifications css */
 
+        .button1:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .icon {
+            cursor: pointer;
+        }
+
+        .icon img {
+            display: inline-block;
+            width: 40px;
+            margin-top: 40px;
+        }
+
+        .icon:hover {
+            opacity: 1;
+        }
+
+        .logo {
+            flex: 1;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        .notifi-box {
+            background-color: white;
+            width: 300px;
+            height: 0px;
+            opacity: 0;
+            position: absolute;
+            top: 100px;
+            right: 35px;
+            transition: 1s opacity, 250ms height;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .notifi-box h2 {
+            font-size: 14px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            color: black;
+            font-weight: 500;
+        }
+
+        .notifi-box h2 span {
+            color: black;
+        }
+
+        .notifi-item {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            padding: 15px 5px;
+            cursor: pointer;
+        }
+
+        .notifi-item:hover {
+            background-color: #00B6FF;
+        }
+
+        .notifi-item img {
+            display: block;
+            width: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .notifi-box .header {
+            background-color: #00B6FF;
+        }
+
+        .notifi-item .text h4 {
+            color: black;
+            font-size: 16px;
+        }
+
+        .notifi-item .text p {
+            color: black;
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -486,87 +565,89 @@
     <ul>
         <li style="float:left; padding: 0;"><a href="index.html"
                 style="width:fit-content; padding: 0%; background-color: #fff;"><img src="./images/logo.png"
-                    alt="JacksonLogo" width="300" height="83" margin="0"></a></li>
-        <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
+                    alt="JacksonLogo" width="300" height="85" margin="0"></a></li>
+        <li style="float: right; border: none;"><a href="login.html" style="font-size: 20px;">Logout<i
                     class="fa fa-sign-out fa-lg"></i></a></li>
-                    <li >
-                      <a href="#">
-                        <div class="icon" onclick="toggleNotifi()">
-                            <nav>
-                              <i class="fa fa-fw fa-bell"></i>
+        <li style="float: right; border-right: 2px solid #fff">
+            <a href="#">
+                <div class="icon" onclick="toggleNotifi()">
+                    <nav>
+                        <i class="fa fa-2x fa-bell"></i>
+                    </nav>
+
+                </div>
+                <div class="notifi-box" id="box">
+                    <div class="header">
+                        <h2>Notifications</h2>
+                    </div>
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Elias Abdurrahman</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
                         </div>
-                        <div class="notifi-box" id="box">
-                            <div class="header">
-                              <h2>Notifications</h2>
-                            </div>
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Elias Abdurrahman</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
+                    </div>
 
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>John Doe</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
-
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Emad Ali</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
-
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Ekram Abu </h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
-
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Jane Doe</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
-
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Jane Doe</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
-
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Jane Doe</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
-
-                          <div class="notifi-item">
-                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
-                            <div class="text">
-                               <h4>Jane Doe</h4>
-                               <p>@lorem ipsum dolor sit amet</p>
-                              </div>
-                          </div>
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>John Doe</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
                         </div>
-                      </nav>
-                      </a>
-                    </li>
-                  </ul>
+                    </div>
+
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Emad Ali</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Ekram Abu </h4>
+                            <p>@lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Jane Doe</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Jane Doe</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Jane Doe</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+
+                    <div class="notifi-item">
+                        <img src="./images/img_avatar.png" alt="img">
+                        <div class="text">
+                            <h4>Jane Doe</h4>
+                            <p>@lorem ipsum dolor sit amet</p>
+                        </div>
+                    </div>
+                </div>
+                </nav>
+            </a>
+        </li>
+    </ul>
 
     <div class="maincontainer">
         <div class="top">
@@ -774,21 +855,21 @@
 
 </script>
 <script type="text/javascript">
-var box  = document.getElementById('box');
-var down = false;
+    var box = document.getElementById('box');
+    var down = false;
 
 
-function toggleNotifi(){
-  if (down) {
-    box.style.height  = '0px';
-    box.style.opacity = 0;
-    down = false;
-  }else {
-    box.style.height  = '1000px';
-    box.style.opacity = 1;
-    down = true;
-  }
-}
+    function toggleNotifi() {
+        if (down) {
+            box.style.height = '0px';
+            box.style.opacity = 0;
+            down = false;
+        } else {
+            box.style.height = '1000px';
+            box.style.opacity = 1;
+            down = true;
+        }
+    }
 </script>
 
 </html>

@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="./style.css">
 
   <style>
-    html{
+    html {
       margin: 0;
       padding: 0;
     }
+
     body {
       margin: 0;
       padding: 0;
@@ -31,8 +32,8 @@
       /* padding:10px; */
     }
 
-    h1{
-      padding:0%;
+    h1 {
+      padding: 0%;
       margin-bottom: 0%;
 
     }
@@ -100,7 +101,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding:10px;
+      padding: 10px;
       /* border:10px; */
     }
 
@@ -110,7 +111,7 @@
     }
 
 
-    .searchbar{
+    .searchbar {
       margin-top: 3%;
       height: 30px;
       display: flex;
@@ -121,18 +122,18 @@
       background-color: #f1f1f1;
     }
 
-    .searchbar input{
+    .searchbar input {
       background: transparent;
       flex: 1;
       border: 0;
       outline: none;
     }
 
-    .searchbar button img{
+    .searchbar button img {
       width: 20px;
     }
 
-    .searchbar button{
+    .searchbar button {
       border: 0;
       border-radius: 50%;
       width: auto;
@@ -144,7 +145,7 @@
       cursor: pointer;
       float: right;
     }
-    
+
 
     form .basic-details .input-box .details {
       display: block;
@@ -339,7 +340,7 @@
     }
 
     hr {
-      border:1px solid #f1f1f1;
+      border: 1px solid #f1f1f1;
       border-radius: 5px;
     }
 
@@ -365,21 +366,19 @@
           width="300" height="83" margin="0"></a></li>
     <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
           class="fa fa-sign-out fa-lg"></i></a></li>
-    <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
-          class="fa fa-bell fa-2x"></i></a></li>
-
   </ul>
   <!-- ///////////////////////////////////////////////////////BASIC-DETAILS///////////////////////////////////////////////// -->
   <div class="container">
     <div class="container1">
       <div class="searchbar" style="display: block;">
-        <input type="text" id="" class="search-bar" placeholder= " &#xf002;  Enter Username" style="font-family: fontawesome, poppins" required>
+        <input type="text" id="" class="search-bar" placeholder=" &#xf002;  Enter Username"
+          style="font-family: fontawesome, poppins" required>
         <button type="button"><img src="./images/search.png" alt=""></button>
       </div>
-        <br>
-        <hr>
-        <br>
-        <form action="">
+      <br>
+      <hr>
+      <br>
+      <form action="">
         <h1 style="display: block;">Basic Information</h1>
         <div class="basic-details">
           <div class="input-box">
@@ -449,7 +448,7 @@
           <div class="input-box">
             <span class="details">User Image</span>
             <input type="file" id="img" name="filename" accept=".jpg,.jpeg,.png" method="post" required>
-          </div> 
+          </div>
         </div>
       </form>
       <br>
@@ -482,7 +481,7 @@
                 <input type="text" id="fatheraadhar" placeholder="Enter Aadhar Number" required>
               </div>
             </div>
-          
+
           </form>
           <!-- ///////////////////////////////////////////////////////MOTHER-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -504,7 +503,7 @@
                 <input type="text" id="motheraadhar" placeholder="Enter Aadhar Number" required>
               </div>
             </div>
-          
+
           </form>
           <!-- ///////////////////////////////////////////////////////CHILD-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -526,7 +525,7 @@
                 <input type="text" id="childaadhar" placeholder="Enter Aadhar Number" required>
               </div>
             </div>
-          
+
           </form>
           <!-- ///////////////////////////////////////////////////////SIBLING-DETAILS///////////////////////////////////////////////// -->
           <form action="#">
@@ -599,166 +598,166 @@
 
 <script type="module">
 
-import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-            import {
-                getAuth,
-                createUserWithEmailAndPassword,
-                signInWithEmailAndPassword,
-                signOut
-            } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-            import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-        
-            const firebaseConfig = {
-                apiKey: "AIzaSyD9yGArkz7oubGAtVO2FbwThGikxhJY3hw",
-                authDomain: "trialproject-9f7bf.firebaseapp.com",
-                databaseURL: "https://trialproject-9f7bf-default-rtdb.firebaseio.com",
-                projectId: "trialproject-9f7bf",
-                storageBucket: "trialproject-9f7bf.appspot.com",
-                messagingSenderId: "188371728581",
-                appId: "1:188371728581:web:f22681635b4def702098ac",
-                measurementId: "G-BCN320ENDH"
-            };
-            const app = initializeApp(firebaseConfig);
-            const auth = getAuth();
-            const database = getDatabase(app);
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
-        var username = document.getElementById('username');
-        var fn = document.getElementById('fn');
-        var ln = document.getElementById('ln');
-        var mob = document.getElementById('mob');
-        var email = document.getElementById('email');
-        var add1 = document.getElementById('add1');
-        var add2 = document.getElementById('add2');
-        var des = document.getElementById('des');
-        var dep = document.getElementById('dep');
-        var dob = document.getElementById('dob');
-        var doj = document.getElementById('doj');
-        var aadhar = document.getElementById('aadhar');
-        var pf = document.getElementById('pf');
-        var acc = document.getElementById('acc');
-        var uan = document.getElementById('uan');
-        var esi = document.getElementById('esi');
-        var pan = document.getElementById('pan');
+  const firebaseConfig = {
+    apiKey: "AIzaSyD9yGArkz7oubGAtVO2FbwThGikxhJY3hw",
+    authDomain: "trialproject-9f7bf.firebaseapp.com",
+    databaseURL: "https://trialproject-9f7bf-default-rtdb.firebaseio.com",
+    projectId: "trialproject-9f7bf",
+    storageBucket: "trialproject-9f7bf.appspot.com",
+    messagingSenderId: "188371728581",
+    appId: "1:188371728581:web:f22681635b4def702098ac",
+    measurementId: "G-BCN320ENDH"
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+  const database = getDatabase(app);
 
-        var save_basic = document.getElementById('save_basic');
-        var save_father = document.getElementById('save_father');
-        var save_mother = document.getElementById('save_mother');
-        var save_child = document.getElementById('save_child');
-        var save_sibling = document.getElementById('save_sibling');
-        var save_medical = document.getElementById('save_medical');
-        // console.log(username+fn+ln+mob+email+add1+add2+des+dep+dob+doj+aadhar+pf+acc+uan+esi+pan);
-        // var img = document.getElementById('img').value;
-        function changes_basic(){
-            update(ref(database, "users/" + username.value),{
-                // username: username.value,
-                fn: fn.value,
-                ln: ln.value,
-                mob: mob.value,
-                email: email.value,
-                add1: add1.value,
-                add2: add2.value,
-                des: des.value,
-                dep: dep.value,
-                dob: dob.value,
-                doj: doj.value,
-                pf: pf.value,
-                aadhar: aadhar.value,
-                acc: acc.value,
-                uan: uan.value,
-                esi: esi.value,
-                pan: pan.value
-            })
-            .then(()=>{
-                alert("updated basic info!");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+  var username = document.getElementById('username');
+  var fn = document.getElementById('fn');
+  var ln = document.getElementById('ln');
+  var mob = document.getElementById('mob');
+  var email = document.getElementById('email');
+  var add1 = document.getElementById('add1');
+  var add2 = document.getElementById('add2');
+  var des = document.getElementById('des');
+  var dep = document.getElementById('dep');
+  var dob = document.getElementById('dob');
+  var doj = document.getElementById('doj');
+  var aadhar = document.getElementById('aadhar');
+  var pf = document.getElementById('pf');
+  var acc = document.getElementById('acc');
+  var uan = document.getElementById('uan');
+  var esi = document.getElementById('esi');
+  var pan = document.getElementById('pan');
 
-        function changes_father(){
-            update(ref(database, "users/" + username.value),{
-                fathern : fathern.value,
-                fathermob : fathermob.value,
-                fatherdob : fatherdob.value,
-                fatheraadhar : fatheraadhar.value
+  var save_basic = document.getElementById('save_basic');
+  var save_father = document.getElementById('save_father');
+  var save_mother = document.getElementById('save_mother');
+  var save_child = document.getElementById('save_child');
+  var save_sibling = document.getElementById('save_sibling');
+  var save_medical = document.getElementById('save_medical');
+  // console.log(username+fn+ln+mob+email+add1+add2+des+dep+dob+doj+aadhar+pf+acc+uan+esi+pan);
+  // var img = document.getElementById('img').value;
+  function changes_basic() {
+    update(ref(database, "users/" + username.value), {
+      // username: username.value,
+      fn: fn.value,
+      ln: ln.value,
+      mob: mob.value,
+      email: email.value,
+      add1: add1.value,
+      add2: add2.value,
+      des: des.value,
+      dep: dep.value,
+      dob: dob.value,
+      doj: doj.value,
+      pf: pf.value,
+      aadhar: aadhar.value,
+      acc: acc.value,
+      uan: uan.value,
+      esi: esi.value,
+      pan: pan.value
+    })
+      .then(() => {
+        alert("updated basic info!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
-            })
-            .then(()=>{
-                alert("updated father's info!");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+  function changes_father() {
+    update(ref(database, "users/" + username.value), {
+      fathern: fathern.value,
+      fathermob: fathermob.value,
+      fatherdob: fatherdob.value,
+      fatheraadhar: fatheraadhar.value
 
-        function changes_mother(){
-            update(ref(database, "users/" + username.value),{
-                mothern : mothern.value,
-                mothermob : mothermob.value,
-                motherdob : motherdob.value,
-                motheraadhar : motheraadhar.value
-            })
-            .then(()=>{
-                alert("updated mother's info!");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+    })
+      .then(() => {
+        alert("updated father's info!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
-        function changes_child(){
-            update(ref(database, "users/" + username.value),{
-                childn : childn.value,
-                childmob : childmob.value,
-                childdob : childdob.value,
-                childaadhar : childaadhar.value
-            })
-            .then(()=>{
-                alert("updated child's info!");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+  function changes_mother() {
+    update(ref(database, "users/" + username.value), {
+      mothern: mothern.value,
+      mothermob: mothermob.value,
+      motherdob: motherdob.value,
+      motheraadhar: motheraadhar.value
+    })
+      .then(() => {
+        alert("updated mother's info!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
-        function changes_sibling(){
-            update(ref(database, "users/" + username.value),{
-                siblingn : siblingn.value,
-                siblingmob : siblingmob.value,
-                siblingdob : siblingdob.value,
-                siblingaadhar : siblingaadhar.value
-            })
-            .then(()=>{
-                alert("updated family info!");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+  function changes_child() {
+    update(ref(database, "users/" + username.value), {
+      childn: childn.value,
+      childmob: childmob.value,
+      childdob: childdob.value,
+      childaadhar: childaadhar.value
+    })
+      .then(() => {
+        alert("updated child's info!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
-        function changes_medical(){
-            update(ref(database, "users/" + username.value),{
-              bg : bg.value,
-              mh : mh.value,
-              nod : nod.value,
-              lcd : lcd.value,
-              ot : ot.value
-            })
-            .then(()=>{
-                alert("updated medical info!");
-            })
-            .catch((error)=>{
-                alert(error);
-            });
-        }
+  function changes_sibling() {
+    update(ref(database, "users/" + username.value), {
+      siblingn: siblingn.value,
+      siblingmob: siblingmob.value,
+      siblingdob: siblingdob.value,
+      siblingaadhar: siblingaadhar.value
+    })
+      .then(() => {
+        alert("updated family info!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
-        save_basic.addEventListener('click', changes_basic);
-        save_father.addEventListener('click', changes_father);
-        save_mother.addEventListener('click', changes_mother);
-        save_child.addEventListener('click', changes_child);
-        save_sibling.addEventListener('click', changes_sibling);
-        save_medical.addEventListener('click', change_medical);
+  function changes_medical() {
+    update(ref(database, "users/" + username.value), {
+      bg: bg.value,
+      mh: mh.value,
+      nod: nod.value,
+      lcd: lcd.value,
+      ot: ot.value
+    })
+      .then(() => {
+        alert("updated medical info!");
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
+
+  save_basic.addEventListener('click', changes_basic);
+  save_father.addEventListener('click', changes_father);
+  save_mother.addEventListener('click', changes_mother);
+  save_child.addEventListener('click', changes_child);
+  save_sibling.addEventListener('click', changes_sibling);
+  save_medical.addEventListener('click', change_medical);
 
 
 
