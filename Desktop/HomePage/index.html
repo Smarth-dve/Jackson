@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="C:\Users\kavir\Desktop\JACKSON\Jackson-master\Desktop\HomePage\Notification.css">
     <style>
         * {
             margin: 0;
@@ -475,6 +476,8 @@
         #myUL li a:hover:not(.header) {
             background-color: #eee;
         }
+
+
     </style>
 </head>
 
@@ -486,10 +489,84 @@
                     alt="JacksonLogo" width="300" height="83" margin="0"></a></li>
         <li style="float: right"><a href="login.html" style="font-size: 20px;">Logout<i
                     class="fa fa-sign-out fa-lg"></i></a></li>
-        <li style="border-right: 2px solid #fff;float: right; height: 87px;"><a href="#"><i
-                    class="fa fa-bell fa-2x"></i></a></li>
+                    <li >
+                      <a href="#">
+                        <div class="icon" onclick="toggleNotifi()">
+                            <nav>
+                              <i class="fa fa-fw fa-bell"></i>
+                        </div>
+                        <div class="notifi-box" id="box">
+                            <div class="header">
+                              <h2>Notifications</h2>
+                            </div>
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Elias Abdurrahman</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
 
-    </ul>
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>John Doe</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Emad Ali</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Ekram Abu </h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Jane Doe</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Jane Doe</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Jane Doe</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+
+                          <div class="notifi-item">
+                            <img src="C:\Users\kavir\Desktop\JACKSON\Animated-Notification-Box-master\img\avatar1.png" alt="img">
+                            <div class="text">
+                               <h4>Jane Doe</h4>
+                               <p>@lorem ipsum dolor sit amet</p>
+                              </div>
+                          </div>
+                        </div>
+                      </nav>
+                      </a>
+                    </li>
+                  </ul>
 
     <div class="maincontainer">
         <div class="top">
@@ -577,6 +654,8 @@
         appId: "1:188371728581:web:f22681635b4def702098ac",
         measurementId: "G-BCN320ENDH"
     };
+
+
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
@@ -691,6 +770,25 @@
                 alert(errorMessage);
             });
     });
+
+
+</script>
+<script type="text/javascript">
+var box  = document.getElementById('box');
+var down = false;
+
+
+function toggleNotifi(){
+  if (down) {
+    box.style.height  = '0px';
+    box.style.opacity = 0;
+    down = false;
+  }else {
+    box.style.height  = '1000px';
+    box.style.opacity = 1;
+    down = true;
+  }
+}
 </script>
 
 </html>
