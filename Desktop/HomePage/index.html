@@ -343,7 +343,7 @@
 
         .updatesalary,
         .findauser,
-        .shiftmanagement,
+        .AboutUs,
         .changepassword {
             display: inline;
             margin-left: 8%;
@@ -656,7 +656,6 @@
                 <button class="User" onclick="document.getElementById('id01').style.display='block'">Add User<i
                         class="fa fa-sign-out fa-lg"></i></button>
                 <div id="id01" class="modal">
-
                     <form class="modal-content animate" action="../AddUserPage/adduser.html" name="myform">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('id01').style.display='none'" class="close"
@@ -675,9 +674,6 @@
                             <label for="psw"><b>Password</b></label>
                             <input type="password" placeholder="Enter Password" name="psw" id="psw" method="post"
                                 required>
-
-                            <!-- <label for="psw-repeat"><b>Confirm Password</b></label>
-                                    <input type="password" placeholder="Confirm Password" name="psw-repeat" method="post" id="psw-repeat" required> -->
                             <hr>
                             <button type="button" id="submit" class="registerbtn">Register</button>
                         </div>
@@ -686,7 +682,9 @@
             </div>
 
             <div class="updatesalary">
-                <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
+                <form action="./updatesalary.html" style="display: inline;">
+                    <button class="User">Update Salary<i class="fa fa-sign-out fa-lg"></i></button>
+                </form>
             </div>
 
             <div class="findauser">
@@ -703,12 +701,17 @@
                 <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
             </div>
 
-            <div class="shiftmanagement">
-                <button class="User">Shift Management<i class="fa fa-sign-out fa-lg"></i></button>
-            </div>
+            <form action="./changepass.html" style="display: inline">
+                <div class="changepassword">
+                    <button class="User">Change Password<i class="fa fa-sign-out fa-lg"></i></button>
+                </div>
+            </form>
 
-            <div class="changepassword">
-                <button class="User">Change Password<i class="fa fa-sign-out fa-lg"></i></button>
+
+            <div class="AboutUs">
+                <a href="https://www.jacksonchemicalindustries.com/">
+                    <button class="User">About Jackson<i class="fa fa-sign-out fa-lg"></i></button>
+                </a>
             </div>
         </div>
     </div>

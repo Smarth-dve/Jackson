@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<title>Search User</title>
+<title>Change Password for User</title>
 
 <head>
     <meta charset="UTF-8">
@@ -114,7 +114,7 @@
         }
 
 
-        .container2 input{
+        .container2 input {
             height: 45px;
             width: 100%;
             /* padding:10px; */
@@ -308,67 +308,33 @@
 
                     <div class="input-box">
                         <span class="details">First Name</span>
-                        <input type="text" id="fn" method="post" disabled="disabled">
+                        <input type="text" id="ln" method="post" disabled="disabled">
                     </div>
+
                     <div class="input-box">
                         <span class="details">Last Name</span>
                         <input type="text" id="ln" method="post" disabled="disabled">
                     </div>
-                    <div class="input-box">
-                        <span class="details">Basic Salary</span>
-                        <input type="text" id="ln" method="post">
-                    </div>
 
                     <div class="input-box">
-                        <span class="details">PF Number</span>
-                        <input type="text" id="pf" method="post" disabled="disabled">
+                        <span class="details">Type New Password</span>
+                        <input type="password" id="fn" method="post">
                     </div>
                     <div class="input-box">
-                        <span class="details">Account Number</span>
-                        <input type="text" id="acc" method="post"
-                            disabled="disabled">
+                        <span class="details">Confirm New Password</span>
+                        <input type="password" id="ln" method="post" >
                     </div>
-                    <div class="input-box">
-                        <span class="details">UAN</span>
-                        <input type="text" id="uan" method="post" disabled="disabled">
-                    </div>
-                    <div class="input-box">
-                        <span class="details">ESI Number</span>
-                        <input type="text" id="esi"  method="post" disabled="disabled">
-                    </div>
-                    <div class="input-box">
-                        <span class="details">PAN Number</span>
-                        <input type="text" id="pan" method="post" disabled="disabled">
-                    </div>
-                    <button type="button" style="display: inline; text-align: center; margin-top: 3%; font-weight: 600;">
+                    
+                    <button type="button"
+                        style="display: inline; text-align: center; margin-top: 3%; font-weight: 600;">
                         Cancel
                     </button>
                     <div class="adduser" style="width: 100%;">
 
                         <button type="button"
-                            style="display: inline; text-align: center; margin-top: 3%; font-weight: 600;"
-                            onclick="document.getElementById('id01').style.display='block'">
-                            Update Salary
+                            style="display: inline; text-align: center; margin-top: 3%; font-weight: 600;">
+                            Update Password
                         </button>
-                        <div id="id01" class="modal">
-                            <form class="modal-content animate" name="myform">
-                                <div class="imgcontainer">
-                                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                                        title="Close Modal">&times;</span>
-                                </div>
-
-                                <center>
-                                    <div class="container2"
-                                        style="display: block; background-color: white; width: 65.5%;">
-                                        <label for="psw"><b>Password</b></label>
-                                        <input type="password" placeholder="Enter Password" name="psw" id="psw"
-                                            method="post" required>
-                                        <hr>
-                                        <button type="button" id="submit" class="registerbtn">Authenticate</button>
-                                    </div>
-                                </center>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </form>
@@ -381,9 +347,6 @@
     </div>
     <br>
 </body>
-
-<!-- <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js"></script> -->
 
 <script type="module">
 
