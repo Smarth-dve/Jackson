@@ -697,9 +697,11 @@
 
         <div class="bottom">
 
-            <div class="attendance">
-                <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
-            </div>
+            <form action="./attendance.html" style="display: inline">
+                <div class="attendance">
+                    <button class="User">Attendance<i class="fa fa-sign-out fa-lg"></i></button>
+                </div>
+            </form>
 
             <form action="./changepass.html" style="display: inline">
                 <div class="changepassword">
@@ -788,6 +790,7 @@
         var nod = "";
         var lcd = "";
         var ot = "";
+        var salary = parseInt("0");
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -834,7 +837,8 @@
                     mh: mh,
                     nod: nod,
                     lcd: lcd,
-                    ot: ot
+                    ot: ot,
+                    salary: salary
                 })
                     .then(() => {
 

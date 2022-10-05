@@ -114,7 +114,7 @@
         }
 
 
-        .container2 input{
+        .container2 input {
             height: 45px;
             width: 100%;
             /* padding:10px; */
@@ -316,7 +316,7 @@
                     </div>
                     <div class="input-box">
                         <span class="details">Basic Salary</span>
-                        <input type="text" id="ln" method="post">
+                        <input type="text" id="salary" method="post">
                     </div>
 
                     <div class="input-box">
@@ -325,8 +325,7 @@
                     </div>
                     <div class="input-box">
                         <span class="details">Account Number</span>
-                        <input type="text" id="acc" method="post"
-                            disabled="disabled">
+                        <input type="text" id="acc" method="post" disabled="disabled">
                     </div>
                     <div class="input-box">
                         <span class="details">UAN</span>
@@ -334,13 +333,14 @@
                     </div>
                     <div class="input-box">
                         <span class="details">ESI Number</span>
-                        <input type="text" id="esi"  method="post" disabled="disabled">
+                        <input type="text" id="esi" method="post" disabled="disabled">
                     </div>
                     <div class="input-box">
                         <span class="details">PAN Number</span>
                         <input type="text" id="pan" method="post" disabled="disabled">
                     </div>
-                    <button type="button" style="display: inline; text-align: center; margin-top: 3%; font-weight: 600;">
+                    <button type="button" id="cancel"
+                        style="display: inline; text-align: center; margin-top: 3%; font-weight: 600;">
                         Cancel
                     </button>
                     <div class="adduser" style="width: 100%;">
@@ -379,7 +379,6 @@
             <!-- ///////////////////////////////////////////////////////FATHER-DETAILS///////////////////////////////////////////////// -->
         </div>
     </div>
-    <br>
 </body>
 
 <!-- <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js"></script>
@@ -410,49 +409,24 @@
     const auth = getAuth();
     const database = getDatabase(app);
 
-    var username = document.getElementById('username');
     var fn = document.getElementById('fn');
     var ln = document.getElementById('ln');
-    var mob = document.getElementById('mob');
-    var email = document.getElementById('email');
-    var add1 = document.getElementById('add1');
-    var add2 = document.getElementById('add2');
-    var des = document.getElementById('des');
-    var dep = document.getElementById('dep');
-    var dob = document.getElementById('dob');
-    var doj = document.getElementById('doj');
-    var aadhar = document.getElementById('aadhar');
     var pf = document.getElementById('pf');
     var acc = document.getElementById('acc');
     var uan = document.getElementById('uan');
     var esi = document.getElementById('esi');
     var pan = document.getElementById('pan');
-    var img = document.getElementById('img');
-    var fathern = document.getElementById('fathern');
-    var fathermob = document.getElementById('fathermob');
-    var fatherdob = document.getElementById('fatherdob');
-    var fatheraadhar = document.getElementById('fatheraadhar');
-    var mothern = document.getElementById('mothern');
-    var mothermob = document.getElementById('mothermob');
-    var motherdob = document.getElementById('motherdob');
-    var motheraadhar = document.getElementById('motheraadhar');
-    var childn = document.getElementById('childn');
-    var childmob = document.getElementById('childmob');
-    var childdob = document.getElementById('childdob');
-    var childaadhar = document.getElementById('childaadhar');
-    var siblingn = document.getElementById('siblingn');
-    var siblingmob = document.getElementById('siblingmob');
-    var siblingdob = document.getElementById('siblingdob');
-    var siblingaadhar = document.getElementById('siblingaadhar');
-    var bg = document.getElementById('bg');
-    var mh = document.getElementById('mh');
-    var nod = document.getElementById('nod');
-    var lcd = document.getElementById('lcd');
-    var ot = document.getElementById('ot');
+    var salary = document.getElementById('salary');
+    var psw = document.getElementById('psw');
 
     var save = document.getElementById('save');
+    var submit = document.getElementById('submit');
+    var cancel = document.getElementById('cancel');
 
-
+    function redirect(){
+          window.location = './index.html'
+        }
+        
     function show_user() {
 
         const dbref = ref(database);
@@ -462,41 +436,13 @@
                 // username: username.value,
                 fn.value = snapshot.val().fn,
                     ln.value = snapshot.val().ln,
-                    mob.value = snapshot.val().mob,
-                    email.value = snapshot.val().email,
-                    add1.value = snapshot.val().add1,
-                    add2.value = snapshot.val().add2,
-                    des.value = snapshot.val().des,
-                    dep.value = snapshot.val().dep,
-                    dob.value = snapshot.val().dob,
-                    doj.value = snapshot.val().doj,
-                    pf.value = snapshot.val().pf,
-                    aadhar.value = snapshot.val().aadhar,
                     acc.value = snapshot.val().acc,
+                    pf.value = snapshot.val().pf,
                     uan.value = snapshot.val().uan,
                     esi.value = snapshot.val().esi,
                     pan.value = snapshot.val().pan,
-                    fathern.value = snapshot.val().fathern,
-                    fathermob.value = snapshot.val().fathermob,
-                    fatherdob.value = snapshot.val().fatherdob,
-                    fatheraadhar.value = snapshot.val().fatheraadhar,
-                    mothern.value = snapshot.val().mothern,
-                    mothermob.value = snapshot.val().mothermob,
-                    motherdob.value = snapshot.val().motherdob,
-                    motheraadhar.value = snapshot.val().motheraadhar,
-                    childn.value = snapshot.val().childn,
-                    childmob.value = snapshot.val().childmob,
-                    childdob.value = snapshot.val().childdob,
-                    childaadhar.value = snapshot.val().childaadhar,
-                    siblingn.value = snapshot.val().siblingn,
-                    siblingmob.value = snapshot.val().siblingmob,
-                    siblingdob.value = snapshot.val().siblingdob,
-                    siblingaadhar.value = snapshot.val().siblingaadhar,
-                    bg.value = snapshot.val().bg,
-                    mh.value = snapshot.val().mh,
-                    nod.value = snapshot.val().nod,
-                    lcd.value = snapshot.val().lcd,
-                    ot.value = snapshot.val().ot
+                    salary.value = snapshot.val().salary
+
             }
             else {
                 alert("No data found");
@@ -507,7 +453,29 @@
             });
     }
 
+    function update_salary() {
+        if(psw.value == "JackAd_77"){
+            update(ref(database, "users/" + username.value), {
+            salary: salary.value
+        })
+        .then(() => {
+                alert("updated salary!");
+                window.location = "./index.html";
+            })
+            .catch((error) => {
+                alert(error);
+            });
+        }
+        else{
+            alert("Unauthorized attempt to update salary!");
+            window.location = "./index.html";
+        }
+            
+    }
+
     save.addEventListener('click', show_user);
+    submit.addEventListener('click', update_salary);
+    cancel.addEventListener('click', redirect);
 
 
 </script>

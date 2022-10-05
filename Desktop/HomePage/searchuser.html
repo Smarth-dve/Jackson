@@ -585,7 +585,7 @@
         </div>
 
         <br><br><br><br>
-        <button type="save" name="commit" action="./index.html" style="font-weight: 600; padding: 1%;">Done</button>
+        <button type="save" id="donebtn" name="commit" action="./index.html" style="font-weight: 600; padding: 1%;">Done</button>
 
       </div>
     </div>
@@ -662,7 +662,11 @@ import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-
         var ot = document.getElementById('ot');
 
         var save = document.getElementById('save');
+        var donebtn = document.getElementById('donebtn');
 
+        function redirect(){
+          window.location = './index.html'
+        }
 
         function show_user(){
 
@@ -719,7 +723,7 @@ import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-
           }
 
         save.addEventListener('click', show_user);
-
+        donebtn.addEventListener('click', redirect);
 
 </script>
 
