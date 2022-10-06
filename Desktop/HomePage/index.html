@@ -289,7 +289,7 @@
             cursor: pointer;
             width: 100%;
         }
-    
+
 
 
 
@@ -654,7 +654,8 @@
         <div class="top">
 
             <div class="adduser">
-                <button class="User" onclick="document.getElementById('id01').style.display='block'">Add User  <i class="fa fa-lg fa-user-o" aria-hidden="true"></i></button>
+                <button class="User" onclick="document.getElementById('id01').style.display='block'">Add User <i
+                        class="fa fa-lg fa-user-o" aria-hidden="true"></i></button>
                 <div id="id01" class="modal">
                     <form class="modal-content animate" action="../AddUserPage/adduser.html" name="myform">
                         <div class="imgcontainer">
@@ -683,13 +684,14 @@
 
             <div class="updatesalary">
                 <form action="./updatesalary.html" style="display: inline;">
-                    <button class="User">Update Salary  <i class="fa fa-lg fa-inr" aria-hidden="true"></i></button>
+                    <button class="User">Update Salary <i class="fa fa-lg fa-inr" aria-hidden="true"></i></button>
                 </form>
             </div>
 
             <div class="findauser">
                 <form action="./searchuser.html" style="display: inline">
-                    <button type="submit" class="User">Search User  <i class="fa fa-lg fa-search" aria-hidden="true"></i></button>
+                    <button type="submit" class="User">Search User <i class="fa fa-lg fa-search"
+                            aria-hidden="true"></i></button>
                 </form>
 
             </div>
@@ -699,21 +701,23 @@
 
             <form action="./attendance.html" style="display: inline">
                 <div class="attendance">
-                    <button class="User">Attendance  <i class="fa fa-lg fa-address-book-o" aria-hidden="true"></i></button>
+                    <button class="User">Attendance <i class="fa fa-lg fa-address-book-o"
+                            aria-hidden="true"></i></button>
                 </div>
             </form>
 
             <form action="./changepass.html" style="display: inline">
                 <div class="changepassword">
-                    <button class="User">Change Password  <i class="fa fa-lg fa-unlock-alt" aria-hidden="true"></i></button>
+                    <button class="User">Change Password <i class="fa fa-lg fa-unlock-alt"
+                            aria-hidden="true"></i></button>
                 </div>
             </form>
 
 
             <div class="AboutUs">
-                <a href="https://www.jacksonchemicalindustries.com/">
-                    <button class="User">About Jackson  <i class="fa fa-lg fa-info-circle" aria-hidden="true"></i></button>
-                </a>
+                <form action="./deleteuser.html" style="display: inline">
+                    <button class="User">Delete User <i class="fa fa-lg fa-trash-o" aria-hidden="true"></i></button>
+                </form>
             </div>
         </div>
     </div>
@@ -791,6 +795,19 @@
         var lcd = "";
         var ot = "";
         var salary = parseInt("0");
+        var jan = parseInt("0");
+        var feb = parseInt("0");
+        var mar = parseInt("0");
+        var apr = parseInt("0");
+        var may = parseInt("0");
+        var jun = parseInt("0");
+        var jul = parseInt("0");
+        var aug = parseInt("0");
+        var sep = parseInt("0");
+        var oct = parseInt("0");
+        var nov = parseInt("0");
+        var dec = parseInt("0");
+
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -838,7 +855,20 @@
                     nod: nod,
                     lcd: lcd,
                     ot: ot,
-                    salary: salary
+                    salary: salary,
+                    jan: jan,
+                    feb: feb,
+                    mar: mar,
+                    apr: apr,
+                    may: may,
+                    jun: jun,
+                    jul: jul,
+                    aug: aug,
+                    sep: sep,
+                    oct: oct,
+                    nov: nov,
+                    dec: dec
+
                 })
                     .then(() => {
 
